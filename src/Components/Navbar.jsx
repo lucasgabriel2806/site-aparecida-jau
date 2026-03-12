@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link } from "react-router-dom";
 import logo_aparecida from "./../assets/img/logo/logo-aparecida.png";
 import facebook_circle from "./../assets/img/logo/facebook-circle.jpeg";
 import instagram_circle from "./../assets/img/logo/instagram-circle.png";
@@ -13,29 +13,29 @@ const Navbar = () => {
         <div className='w-full h-[35px] flex justify-center relative'>
             <nav className='flex items-center gap-[30px] list-none'>
                 <li>
-                    <a href="#">
+                    <Link to="/home">
                         Home
-                    </a>
+                    </Link>
                 </li>
                 <li>
-                    <a className="flex items-center text-[14px]" href="#">
+                    <Link className="flex items-center" to="#">
                         Paróquia <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="15px" fill="#000"><path d="M480-360 280-560h400L480-360Z"/></svg>
-                    </a>
+                    </Link>
                 </li>
                 <li>
-                    <a className="text-[14px]" href="#">
+                    <Link to="/noticias">
                         Notícias
-                    </a>
+                    </Link>
                 </li>
                 <li>
-                    <a className="text-[14px]" href="#">
+                    <Link to="/boletim-info">
                         Boletim Info
-                    </a>
+                    </Link>
                 </li>
                 <li>
-                    <a className="text-[14px]" href="#">
+                    <Link to="/contato">
                         Contato
-                    </a>
+                    </Link>
                 </li>
             </nav>
             <div className='flex items-center gap-[12px] absolute right-[100px]'>

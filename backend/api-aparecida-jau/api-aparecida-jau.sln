@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api-aparecida-jau", "api-aparecida-jau.csproj", "{06CC0D47-B8B9-9C9A-351B-06CFEF47214B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06CC0D47-B8B9-9C9A-351B-06CFEF47214B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06CC0D47-B8B9-9C9A-351B-06CFEF47214B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06CC0D47-B8B9-9C9A-351B-06CFEF47214B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06CC0D47-B8B9-9C9A-351B-06CFEF47214B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AC6D0A92-EFE7-46C8-97BC-416F3469E5A1}
+	EndGlobalSection
+EndGlobal

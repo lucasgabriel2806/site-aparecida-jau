@@ -6,9 +6,9 @@ import youtube_circle from "./../assets/img/logo/youtube-circle.png";
 
 const Navbar = () => {
   return (
-    <header className='flex flex-col items-center mt-[25px]'>
+    <header className='flex flex-col items-center mt-[8px]'>
         <div>
-            <img src={logo_aparecida} alt="" />
+            <img className="w-[250px]" src={logo_aparecida} alt="" />
         </div>
         <div className='w-full h-[35px] flex justify-center relative'>
             <nav className='flex items-center gap-[30px] list-none'>

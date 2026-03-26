@@ -8,5 +8,7 @@ namespace api_aparecida_jau.Data
         public AppDbContext(DbContextOptions options) : base(options) {}
 
         public DbSet<BoletimInfo> BoletinsInfos { get; set; }
+
+        public DbSet<Usuario> Usuarios { get; set; }
     }
 }

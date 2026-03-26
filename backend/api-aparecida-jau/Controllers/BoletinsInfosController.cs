@@ -17,16 +17,54 @@ namespace api_aparecida_jau.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddBoletimInfo([FromBody] BoletimInfo boletiminfo)
+        public async Task<IActionResult> AddBoletimInfo([FromForm] BoletimInfoCreateRequest request)
         {
-            if(!ModelState.IsValid)
+            if (request.Img == null || request.Pdf == null)
             {
-                return BadRequest(ModelState);
+                return BadRequest("Arquivos não enviados");
             }
+
+            // PEGAR ANO E MÊS (formato: 2025-03)
+            var partesData = request.Data.Split("-");
+            var ano = partesData[0];
+            var mes = partesData[1];
+
+            // CRIAR PASTAS DINÂMICAS
+            var imgFolder = Path.Combine("wwwroot/img", ano);
+            var pdfFolder = Path.Combine("wwwroot/pdf", ano);
+
+            Directory.CreateDirectory(imgFolder);
+            Directory.CreateDirectory(pdfFolder);
+
+            // CAMINHOS DOS ARQUIVOS
+            var imgPath = Path.Combine(imgFolder, request.Img.FileName);
+            var pdfPath = Path.Combine(pdfFolder, request.Pdf.FileName);
+
+            // SALVAR IMAGEM
+            using (var stream = new FileStream(imgPath, FileMode.Create))
+            {
+                await request.Img.CopyToAsync(stream);
+            }
+
+            // SALVAR PDF
+            using (var stream = new FileStream(pdfPath, FileMode.Create))
+            {
+                await request.Pdf.CopyToAsync(stream);
+            }
+
+            // SALVAR NO BANCO
+            var boletiminfo = new BoletimInfo
+            {
+                Titulo = request.Titulo,
+                Data = request.Data,
+                Img = $"/img/{ano}/{request.Img.FileName}",
+                Pdf = $"/pdf/{ano}/{request.Pdf.FileName}"
+            };
+
             _appDbContext.BoletinsInfos.Add(boletiminfo);
             await _appDbContext.SaveChangesAsync();
 
-            return Created("Boletim Informativo adicionado com sucesso!", boletiminfo);
+            return Ok(boletiminfo);
         }
 
         [HttpGet]

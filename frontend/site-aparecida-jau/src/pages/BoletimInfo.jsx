@@ -44,7 +44,7 @@ const BoletimInfo = () => {
         nomeMes.includes(busca)
       );
     })
-    .sort((a, b) => b.data.localeCompare(a.data)); // 🔥 MAIS RECENTE PRIMEIRO
+    .sort((a, b) => b.data.localeCompare(a.data)); // MAIS RECENTE PRIMEIRO
 
   return (
     <div className="flex flex-col items-center gap-[30px] mt-[25px]">

@@ -7,11 +7,11 @@ const BoletimInfoCard = ({ boletins }) => {
       )}
 
       {boletins.map((boletim) => (
-        <a key={boletim.id} href={boletim.pdf} target="_blank">
+        <a key={boletim.id} href={`http://localhost:5220${boletim.pdf}`} target="_blank">
 
           <img
             className="rounded-[10px]"
-            src={boletim.img}
+            src={`http://localhost:5220${boletim.img}`}
             alt={boletim.titulo}
           />
 

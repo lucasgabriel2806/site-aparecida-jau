@@ -26,6 +26,11 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 var app = builder.Build();
 
+app.UseStaticFiles(new StaticFileOptions
+{
+    ServeUnknownFileTypes = true
+});
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

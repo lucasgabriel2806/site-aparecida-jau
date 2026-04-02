@@ -286,4 +286,3 @@ C:\fatec\projetos\reactjs\site-aparecida-jau\backend\api-aparecida-jau\obj\Debug
 C:\fatec\projetos\reactjs\site-aparecida-jau\backend\api-aparecida-jau\obj\Debug\net10.0\api-aparecida-jau.pdb
 C:\fatec\projetos\reactjs\site-aparecida-jau\backend\api-aparecida-jau\obj\Debug\net10.0\api-aparecida-jau.genruntimeconfig.cache
 C:\fatec\projetos\reactjs\site-aparecida-jau\backend\api-aparecida-jau\obj\Debug\net10.0\ref\api-aparecida-jau.dll
-c:\fatec\projetos\reactjs\site-aparecida-jau\backend\api-aparecida-jau\obj\Debug\net10.0\compressed\s7t7nmzfzg-{0}-maobepf9ld-maobepf9ld.gz

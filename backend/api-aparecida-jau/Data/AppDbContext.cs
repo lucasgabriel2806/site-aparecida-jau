@@ -10,5 +10,7 @@ namespace api_aparecida_jau.Data
         public DbSet<BoletimInfo> BoletinsInfos { get; set; }
 
         public DbSet<Usuario> Usuarios { get; set; }
+
+        public DbSet<Noticia> Noticias { get; set; }
     }
 }

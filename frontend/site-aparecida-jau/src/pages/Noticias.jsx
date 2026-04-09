@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
-import Noticia from "./../Components/Noticia"
 import { Link } from "react-router-dom"
+import Title from "./../Components/Title"
+import NoticiaCard from "../Components/NoticiaCard"
 
 const Noticias = () => {
   const [noticias, setNoticias] = useState([])
@@ -15,16 +16,19 @@ const Noticias = () => {
       .catch(err => console.error("Erro:", err))
   }, [])
 
-  // 🔎 FILTRO
   const noticiasFiltradas = noticias.filter(noticia =>
     noticia.titulo.toLowerCase().includes(busca.toLowerCase())
   )
 
   return (
-    <div>
-      <h1>Notícias</h1>
+    <div className="flex flex-col items-center gap-[30px] mt-[25px]">
+      <Title>Notícias</Title>
 
-      {/* 🔎 CAMPO DE BUSCA */}
+      <p>
+        Confira as notícias da casa da Mãe, incluindo eventos. <br />
+        Para uma busca mais exata, selecione a data da notícia.
+      </p>
+
       <input
         type="text"
         placeholder="Buscar notícia..."
@@ -39,12 +43,13 @@ const Noticias = () => {
         }}
       />
 
-      {/* 📰 LISTA */}
-      {noticiasFiltradas.map(noticia => (
-        <Link key={noticia.id} to={`/noticias/${noticia.slug}`}>
-          <Noticia noticia={noticia} />
-        </Link>
-      ))}
+      <div className="grid grid-cols-3 gap-8">
+        {noticiasFiltradas.map(noticia => (
+          <Link key={noticia.id} to={`/noticias/${noticia.slug}`}>
+            <NoticiaCard noticia={noticia} />
+          </Link>
+        ))}
+      </div>
     </div>
   )
 }

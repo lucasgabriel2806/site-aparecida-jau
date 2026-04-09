@@ -51,6 +51,8 @@ namespace api_aparecida_jau.Controllers
             var noticia = new Noticia
             {
                 Titulo = request.Titulo,
+                Subtitulo = request.Subtitulo,
+                Autor = request.Autor,
                 Conteudo = request.Conteudo,
                 ImagemCapa = $"/img/{ano}/{fileName}",
                 Data = DateTime.Now,

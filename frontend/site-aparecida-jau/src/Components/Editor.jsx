@@ -28,7 +28,6 @@ export default function Editor({ onChange }) {
 
     const data = await res.json()
 
-    // 🔥 AQUI ESTÁ O SEGREDO
     editor
       .chain()
       .focus()
@@ -40,31 +39,32 @@ export default function Editor({ onChange }) {
   if (!editor) return null
 
   return (
-    <div>
-      {/* 🧰 Toolbar */}
-      <div style={{ marginBottom: "10px" }}>
-        <button onClick={() => editor.chain().focus().toggleBold().run()}>
+    <div className='flex flex-col w-[800px]'>
+
+      <div className='flex flex-col mb-4 mb-[35px]'>
+        <label>Escolher Imagens</label>
+        <input className='hover:cursor-pointer border border-[#ccc] px-4 py-2 rounded-[10px]' type="file" accept="image/*" onChange={handleImageUpload} />
+      </div>
+
+      <div className="flex">
+        <button className="hover:cursor-pointer border px-4 py-2" onClick={() => editor.chain().focus().toggleBold().run()}>
           B
         </button>
 
-        <button onClick={() => editor.chain().focus().toggleItalic().run()}>
+        <button className="hover:cursor-pointer border px-5 py-2" onClick={() => editor.chain().focus().toggleItalic().run()}>
           I
         </button>
 
-        <button onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()}>
+        <button className="hover:cursor-pointer border px-3 py-2" onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()}>
           H1
         </button>
 
-        <button onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}>
+        <button className="hover:cursor-pointer border px-3 py-2" onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}>
           H2
-        </button>
-
-        {/* 📷 botão imagem */}
-        <input type="file" accept="image/*" onChange={handleImageUpload} />
+        </button>                
       </div>
-
-      {/* ✍️ Área de edição */}
-      <div style={{ border: "1px solid #ccc", padding: "10px", minHeight: "200px" }}>
+      
+      <div style={{ border: "1px solid #ccc", padding: "10px", minHeight: "500px" }}>
         <EditorContent editor={editor} />
       </div>
     </div>

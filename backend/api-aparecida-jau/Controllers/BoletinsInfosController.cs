@@ -16,7 +16,7 @@ namespace api_aparecida_jau.Controllers
             _appDbContext = appDbContext;
         }
 
-        [HttpPost]
+        [HttpPost]      
         public async Task<IActionResult> AddBoletimInfo([FromForm] BoletimInfoCreateRequest request)
         {
             if (request.Img == null || request.Pdf == null)
@@ -24,41 +24,35 @@ namespace api_aparecida_jau.Controllers
                 return BadRequest("Arquivos não enviados");
             }
 
-            // PEGAR ANO E MÊS (formato: 2025-03)
             var partesData = request.Data.Split("-");
             var ano = partesData[0];
             var mes = partesData[1];
 
-            // CRIAR PASTAS DINÂMICAS
-            var imgFolder = Path.Combine("wwwroot/img", ano);
-            var pdfFolder = Path.Combine("wwwroot/pdf", ano);
+            var imgFolder = Path.Combine("wwwroot/boletim-info/img", ano);
+            var pdfFolder = Path.Combine("wwwroot/boletim-info/pdf", ano);
 
             Directory.CreateDirectory(imgFolder);
             Directory.CreateDirectory(pdfFolder);
 
-            // CAMINHOS DOS ARQUIVOS
             var imgPath = Path.Combine(imgFolder, request.Img.FileName);
             var pdfPath = Path.Combine(pdfFolder, request.Pdf.FileName);
 
-            // SALVAR IMAGEM
             using (var stream = new FileStream(imgPath, FileMode.Create))
             {
                 await request.Img.CopyToAsync(stream);
             }
 
-            // SALVAR PDF
             using (var stream = new FileStream(pdfPath, FileMode.Create))
             {
                 await request.Pdf.CopyToAsync(stream);
             }
 
-            // SALVAR NO BANCO
             var boletiminfo = new BoletimInfo
             {
                 Titulo = request.Titulo,
                 Data = request.Data,
-                Img = $"/img/{ano}/{request.Img.FileName}",
-                Pdf = $"/pdf/{ano}/{request.Pdf.FileName}"
+                Img = $"/boletim-info/img/{ano}/{request.Img.FileName}",
+                Pdf = $"/boletim-info/pdf/{ano}/{request.Pdf.FileName}"
             };
 
             _appDbContext.BoletinsInfos.Add(boletiminfo);

@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./Components/Navbar.jsx";
 
+import HistoriaDaParoquia from './pages/HistoriaDaParoquia.jsx';
 import Contato from './pages/Contato.jsx';
 import BoletimInfo from "./pages/BoletimInfo.jsx";
 import Login from "./pages/Login.jsx";
@@ -10,7 +11,7 @@ import Admin from "./pages/Admin";
 import CriarBoletimInfo from "./pages/CriarBoletimInfo";
 import CriarNoticia from "./pages/CriarNoticia.jsx";
 import Noticias from "./pages/Noticias.jsx";
-import NoticiaDetalhe from "./pages/NoticiaDetalhe"
+import NoticiaDetalhe from "./pages/NoticiaDetalhe";
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
       <Navbar/>
 
       <Routes>
+        <Route path="/paroquia/historia-da-paroquia" element={<HistoriaDaParoquia />} />
         <Route path="/boletim-info" element={<BoletimInfo />} />
         <Route path="/contato" element={<Contato />} />
         <Route path="/login" element={<Login />} />

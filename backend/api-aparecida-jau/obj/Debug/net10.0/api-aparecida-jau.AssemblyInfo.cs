@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("api-aparecida-jau")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b655d701829e22e7bc65134875f3375af81ea5f3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6e862843035e0763110fc648108d1c62bb79e8d9")]
 [assembly: System.Reflection.AssemblyProductAttribute("api-aparecida-jau")]
 [assembly: System.Reflection.AssemblyTitleAttribute("api-aparecida-jau")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

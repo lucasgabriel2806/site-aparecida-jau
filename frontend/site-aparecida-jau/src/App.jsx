@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar.jsx";
 
 import HistoriaDaParoquia from './pages/HistoriaDaParoquia.jsx';
+import HorariosDeMissa from './pages/HorariosDeMissa.jsx';
 import Contato from './pages/Contato.jsx';
 import BoletimInfo from "./pages/BoletimInfo.jsx";
 import Login from "./pages/Login.jsx";
@@ -22,6 +23,7 @@ function App() {
 
       <Routes>
         <Route path="/paroquia/historia-da-paroquia" element={<HistoriaDaParoquia />} />
+        <Route path="/paroquia/horarios-de-missa" element={<HorariosDeMissa />} />
         <Route path="/boletim-info" element={<BoletimInfo />} />
         <Route path="/contato" element={<Contato />} />
         <Route path="/login" element={<Login />} />

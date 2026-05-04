@@ -42,6 +42,12 @@ const Navbar = () => {
                 >
                     História da Paróquia
                 </Link>
+                <Link 
+                    to="/paroquia/horarios-de-missa"
+                    className="px-4 py-2 hover:bg-gray-100"
+                >
+                    Horários de Missa
+                </Link>
                 </div>
             )}
           </li>

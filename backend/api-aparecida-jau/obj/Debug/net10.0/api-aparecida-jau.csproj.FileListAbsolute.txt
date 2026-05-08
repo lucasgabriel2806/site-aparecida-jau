@@ -286,3 +286,9 @@ C:\fatec\projetos\reactjs\site-aparecida-jau\backend\api-aparecida-jau\obj\Debug
 C:\fatec\projetos\reactjs\site-aparecida-jau\backend\api-aparecida-jau\obj\Debug\net10.0\api-aparecida-jau.pdb
 C:\fatec\projetos\reactjs\site-aparecida-jau\backend\api-aparecida-jau\obj\Debug\net10.0\api-aparecida-jau.genruntimeconfig.cache
 C:\fatec\projetos\reactjs\site-aparecida-jau\backend\api-aparecida-jau\obj\Debug\net10.0\ref\api-aparecida-jau.dll
+C:\fatec\projetos\reactjs\site-aparecida-jau\backend\api-aparecida-jau\bin\Debug\net10.0\DnsClient.dll
+C:\fatec\projetos\reactjs\site-aparecida-jau\backend\api-aparecida-jau\bin\Debug\net10.0\MongoDB.Bson.dll
+C:\fatec\projetos\reactjs\site-aparecida-jau\backend\api-aparecida-jau\bin\Debug\net10.0\MongoDB.Driver.dll
+C:\fatec\projetos\reactjs\site-aparecida-jau\backend\api-aparecida-jau\bin\Debug\net10.0\SharpCompress.dll
+C:\fatec\projetos\reactjs\site-aparecida-jau\backend\api-aparecida-jau\bin\Debug\net10.0\Snappier.dll
+C:\fatec\projetos\reactjs\site-aparecida-jau\backend\api-aparecida-jau\bin\Debug\net10.0\ZstdSharp.dll

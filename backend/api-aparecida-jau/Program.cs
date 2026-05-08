@@ -1,5 +1,7 @@
 using api_aparecida_jau.Data;
 using Microsoft.EntityFrameworkCore;
+using api_aparecida_jau.Mongo;
+using api_aparecida_jau.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,6 +25,11 @@ var connectionString = builder.Configuration.GetConnectionString("AppDbConnectio
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString))
 );
+
+builder.Services.Configure<MongoDbSettings>(
+    builder.Configuration.GetSection("MongoDbSettings"));
+
+builder.Services.AddSingleton<AlbumService>();
 
 var app = builder.Build();
 

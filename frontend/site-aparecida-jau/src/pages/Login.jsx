@@ -1,6 +1,6 @@
 import { useState } from "react";
 import imagem_ns_aparecida3_login from "./../../src/assets/img/paroquia/presbiterio/imagem_ns_aparecida3_login.jpg";
-import Title from "./../Components/Title";
+import Heading from "./../Components/Heading";
 
 const Login = () => {
 
@@ -53,7 +53,7 @@ const Login = () => {
     <div className="flex justify-between">
 
       <div className="w-[800px] flex flex-col justify-center items-center">
-        <Title>Login</Title>
+        <Heading>Login</Heading>
 
         <form onSubmit={handleLogin} className="flex flex-col">
 

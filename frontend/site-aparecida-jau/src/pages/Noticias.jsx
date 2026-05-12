@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
-import Title from "./../Components/Title"
+import Heading from "./../Components/Heading"
 import NoticiaCard from "../Components/NoticiaCard"
 
 const Noticias = () => {
@@ -22,7 +22,7 @@ const Noticias = () => {
 
   return (
     <div className="flex flex-col items-center gap-[30px] mt-[25px]">
-      <Title>Notícias</Title>
+      <Heading>Notícias</Heading>
 
       <p>
         Confira as notícias da casa da Mãe, incluindo eventos. <br />

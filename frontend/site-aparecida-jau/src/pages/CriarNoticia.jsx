@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Editor from "../Components/Editor"
 import axios from "axios"
-import Title from "./../Components/Title";
+import Heading from "./../Components/Heading";
 
 export default function CriarNoticia() {
   const [titulo, setTitulo] = useState("")
@@ -35,7 +35,7 @@ export default function CriarNoticia() {
     <div className="flex justify-center mt-[25px]">
       <div className="flex flex-col items-center gap-[25px] w-[800px]">
 
-        <Title>Criar Notícia</Title>
+        <Heading>Criar Notícia</Heading>
 
         <p>Área de criação de Notícias</p>
 

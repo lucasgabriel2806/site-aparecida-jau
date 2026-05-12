@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import Title from "../Components/Title"
+import Heading from "../Components/Heading"
 
 export default function NoticiaDetalhe() {
   const { slug } = useParams()
@@ -21,7 +21,7 @@ export default function NoticiaDetalhe() {
     <div className="flex justify-center">
       <div className="w-[1000px] pt-[50px]">
 
-        <Title>{noticia.titulo}</Title>
+        <Heading>{noticia.titulo}</Heading>
 
         <p className="text-[20px] text-[#555] mt-[15px]">
           {noticia.subtitulo}

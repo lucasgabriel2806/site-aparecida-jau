@@ -1,5 +1,5 @@
 import React from 'react';
-import Title from '../Components/Title';
+import Heading from '../Components/Heading';
 import capa_noticia from "./../assets/img/paroquia/historia/capa-noticia.png";
 import img_noticia1 from "./../assets/img/paroquia/historia/img-noticia1.jpg";
 import img_noticia2 from "./../assets/img/paroquia/historia/img-noticia2.jpg";
@@ -10,12 +10,14 @@ import img_noticia6 from "./../assets/img/paroquia/historia/img-noticia6.jpg";
 import img_noticia7 from "./../assets/img/paroquia/historia/img-noticia7.jpg";
 
 const HistoriaDaParoquia = () => {
+
   return (
+
     <div className='flex justify-center'>
 
-        <div className='w-[1000px] pt-[50px]'>
+        <div className='w-250 pt-12.5'>
             
-            <Title>História da Paróquia</Title>
+            <Heading>História da Paróquia</Heading>
 
             <p>Vamos contar a história do nosso começo e de como a comunidade teve um papel fundamental na construção de nossa história.</p>
 
@@ -132,7 +134,9 @@ const HistoriaDaParoquia = () => {
         </div>
 
     </div>
+
   )
+
 }
 
 export default HistoriaDaParoquia;

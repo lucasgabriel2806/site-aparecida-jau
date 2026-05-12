@@ -1,6 +1,5 @@
 import React from 'react';
-import Title from '../Components/Title';
-import SubTitle from '../Components/SubTitle';
+import Heading from '../Components/Heading';
 import banner_paroquia_interno from "./../assets/img/paroquia/interno/banner-paroquia-interno.png";
 
 const HorariosDeMissa = () => {
@@ -9,11 +8,11 @@ const HorariosDeMissa = () => {
 
         <div className='w-[1000px] pt-[50px]'>
 
-            <Title>Horários de Missa</Title>
+            <Heading>Horários de Missa</Heading>
 
             <img className='rounded-[15px] mb-[50px]' src={banner_paroquia_interno} alt="" />
 
-            <SubTitle>Missas na Paróquia</SubTitle>
+            <Heading size='28px' level={2}>Missas na Paróquia</Heading>
 
             <div className='flex justify-between mt-[25px] mb-[50px]'>
 
@@ -79,7 +78,7 @@ const HorariosDeMissa = () => {
 
             </div>
 
-            <SubTitle>Missas na Capela Medianeira</SubTitle>
+            <Heading size='28px' level={2}>Missas na Capela Medianeira</Heading>
 
             <div className='flex gap-[50px] mt-[25px] mb-[50px]'>
 

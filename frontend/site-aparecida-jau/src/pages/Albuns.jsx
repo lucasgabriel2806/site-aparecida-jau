@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import AlbumCard from "../Components/AlbumCard"
-import Title from "../Components/Title"
+import Heading from "../Components/Heading"
 
 export default function Albuns() {
   const [albuns, setAlbuns] = useState([])
@@ -22,7 +22,7 @@ export default function Albuns() {
 
       <div className="w-[1200px] flex flex-col gap-[40px]">
 
-        <Title>Galeria</Title>
+        <Heading>Galeria</Heading>
 
         <p>
           Confira registros fotográficos das missas,

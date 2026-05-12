@@ -1,6 +1,6 @@
 import { useState } from "react"
 import axios from "axios"
-import Title from "../Components/Title"
+import Heading from "../Components/Heading"
 
 export default function CriarAlbum() {
   const [titulo, setTitulo] = useState("")
@@ -38,7 +38,7 @@ export default function CriarAlbum() {
     <div className="flex justify-center mt-[40px]">
       <div className="w-[800px] flex flex-col gap-[25px]">
 
-        <Title>Criar Álbum</Title>
+        <Heading>Criar Álbum</Heading>
 
         <div className="flex flex-col gap-[10px]">
           <label>Título do álbum</label>

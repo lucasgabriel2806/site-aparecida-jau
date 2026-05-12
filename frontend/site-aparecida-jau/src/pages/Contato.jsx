@@ -1,4 +1,4 @@
-import Title from './../Components/Title';
+import Heading from './../Components/Heading';
 import SocialMediaIcons from '../Components/SocialMediaIcons';
 
 const Contato = () => {
@@ -6,7 +6,7 @@ const Contato = () => {
     <>
         <div className="flex flex-col gap-[30px] items-center mt-[25px]">
 
-            <Title>Contato</Title>
+            <Heading>Contato</Heading>
 
             <form className="flex flex-col" action="https://formsubmit.co/aparecidajausite@gmail.com" method="POST">
 

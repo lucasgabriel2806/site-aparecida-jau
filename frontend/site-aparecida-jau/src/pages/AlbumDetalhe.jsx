@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import Title from "../Components/Title"
+import Heading from "../Components/Heading"
 
 export default function AlbumDetalhe() {
   const { slug } = useParams()
@@ -23,7 +23,7 @@ export default function AlbumDetalhe() {
 
       <div className="w-[1200px] flex flex-col gap-[30px]">
 
-        <Title>{album.titulo}</Title>
+        <Heading>{album.titulo}</Heading>
 
         <p className="text-[18px] text-[#666]">
           {album.descricao}

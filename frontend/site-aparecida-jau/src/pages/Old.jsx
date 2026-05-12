@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { boletim_info } from "./../data/boletimInfo";
 import BoletimInfoCard from "../Components/BoletimInfoCard";
-import Title from "./../Components/Title";
+import Heading from "./../Components/Heading";
 
 const BoletimInfo = () => {
 
@@ -40,7 +40,7 @@ const BoletimInfo = () => {
     <>
         <div className="flex flex-col items-center gap-[30px] mt-[25px]">
 
-            <Title>Boletim Informativo</Title>
+            <Heading>Boletim Informativo</Heading>
 
             <p>Confira as notícias e eventos da paróquia em nossos Boletins Informativos.</p>
 

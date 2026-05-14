@@ -85,6 +85,9 @@ const Navbar = () => {
           <a href="https://chat.whatsapp.com/EvxJksmUdIYDxzw5fUI99E" target='_blank' rel="noreferrer">
             <img className='w-[30px] rounded-[50%]' src={whatsapp_square} alt="" />
           </a>
+          <a className='flex justify-center items-center bg-[#034389] w-[100px] h-[30px] text-[#fff] rounded-[20px]' href="/login">
+              Área ADM
+          </a>
         </div>
       </div>
 

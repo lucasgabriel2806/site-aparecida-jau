@@ -35,8 +35,8 @@ export default function CriarAlbum() {
   }
 
   return (
-    <div className="flex justify-center mt-[40px]">
-      <div className="w-[800px] flex flex-col gap-[25px]">
+    <div className="flex justify-center mt-[50px]">
+      <div className="w-[1000px] flex flex-col gap-[25px]">
 
         <Heading>Criar Álbum</Heading>
 

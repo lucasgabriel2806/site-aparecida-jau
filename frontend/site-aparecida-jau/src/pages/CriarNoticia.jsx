@@ -32,8 +32,8 @@ export default function CriarNoticia() {
   }
 
   return (
-    <div className="flex justify-center mt-[25px]">
-      <div className="flex flex-col items-center gap-[25px] w-[800px]">
+    <div className="flex justify-center mt-[50px]">
+      <div className="flex flex-col gap-[25px] w-[1000px]">
 
         <Heading>Criar Notícia</Heading>
 
@@ -78,7 +78,7 @@ export default function CriarNoticia() {
         </div>
 
         <button
-          className="hover:cursor-pointer bg-[#034389] text-white p-2 w-[200px] rounded-[25px] mb-[100px]"
+          className="bg-[#034389] text-white h-[50px] rounded-[999px] hover:cursor-pointer"
           onClick={handleSubmit}
         >
           Criar Notícia

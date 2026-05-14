@@ -39,7 +39,7 @@ export default function Editor({ onChange }) {
   if (!editor) return null
 
   return (
-    <div className='flex flex-col w-[800px]'>
+    <div className='flex flex-col w-[1000px]'>
 
       <div className='flex flex-col mb-4 mb-[35px]'>
         <label>Escolher Imagens</label>

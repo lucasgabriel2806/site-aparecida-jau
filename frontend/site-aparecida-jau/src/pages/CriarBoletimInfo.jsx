@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Heading from "../Components/Heading";
 
 const CriarBoletimInfo = () => {
   const [titulo, setTitulo] = useState("");
@@ -29,19 +30,19 @@ const CriarBoletimInfo = () => {
   };
 
   return (
-    <div className="flex justify-center mt-[20px]">
+    <div className="flex justify-center mt-[50px]">
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col w-[500px] gap-[10px]"
+        className="flex flex-col w-[1000px] gap-[10px]"
       >
-        <h2 className="text-[24px] font-bold">Criar Boletim</h2>
+        <Heading>Criar Boletim</Heading>
 
         <input
           type="text"
           placeholder="Título (ex: Março de 2023)"
           value={titulo}
           onChange={(e) => setTitulo(e.target.value)}
-          className="p-[10px] border rounded"
+          className="rounded-[10px] border border-[#ccc] p-2"
         />
 
         <input
@@ -49,7 +50,7 @@ const CriarBoletimInfo = () => {
           placeholder="Data (ex: 2023-03)"
           value={data}
           onChange={(e) => setData(e.target.value)}
-          className="p-[10px] border rounded"
+          className="rounded-[10px] border border-[#ccc] p-2"
         />
 
         <input
@@ -66,7 +67,7 @@ const CriarBoletimInfo = () => {
 
         <button
           type="submit"
-          className="bg-[#034389] text-white p-[10px] rounded"
+          className="bg-[#034389] text-white h-[50px] rounded-[999px] hover:cursor-pointer"
         >
           Criar Boletim
         </button>

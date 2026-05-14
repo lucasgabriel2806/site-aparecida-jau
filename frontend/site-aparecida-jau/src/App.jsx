@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./Components/Navbar.jsx";
 
+import Home from "./pages/Home.jsx";
 import HistoriaDaParoquia from './pages/HistoriaDaParoquia.jsx';
 import HorariosDeMissa from './pages/HorariosDeMissa.jsx';
 import Contato from './pages/Contato.jsx';
@@ -25,6 +26,7 @@ function App() {
       <Navbar/>
 
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/paroquia/historia-da-paroquia" element={<HistoriaDaParoquia />} />
         <Route path="/paroquia/horarios-de-missa" element={<HorariosDeMissa />} />
         <Route path="/albuns" element={<Albuns />} />

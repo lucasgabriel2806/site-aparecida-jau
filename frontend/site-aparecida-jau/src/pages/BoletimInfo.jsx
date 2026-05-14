@@ -64,7 +64,22 @@ const BoletimInfo = () => {
         />
       </div>
 
-      <BoletimInfoCard boletins={boletinsFiltrados} />
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[25px]">
+
+        {boletinsFiltrados.length === 0 && (
+          <p>Nenhum boletim encontrado</p>
+        )}
+
+        {boletinsFiltrados.map((boletim) => (
+
+          <BoletimInfoCard
+            key={boletim.id}
+            boletim={boletim}
+          />
+
+        ))}
+
+      </div>
 
     </div>
   );

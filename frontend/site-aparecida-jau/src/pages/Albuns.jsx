@@ -22,7 +22,7 @@ export default function Albuns() {
 
       <div className="w-[1200px] flex flex-col gap-[40px]">
 
-        <Heading>Galeria</Heading>
+        <Heading>Álbuns</Heading>
 
         <p>
           Confira registros fotográficos das missas,

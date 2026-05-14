@@ -18,7 +18,7 @@ const Navbar = () => {
       <div className='w-full h-[35px] flex justify-center relative'>
         <nav className='flex items-center gap-[30px] list-none'>
           <li>
-            <Link to="/home">Home</Link>
+            <Link to="/">Home</Link>
           </li>
 
           {/* DROPDOWN PARÓQUIA */}
@@ -47,6 +47,12 @@ const Navbar = () => {
                     className="px-4 py-2 hover:bg-gray-100"
                 >
                     Horários de Missa
+                </Link>
+                <Link 
+                    to="/albuns"
+                    className="px-4 py-2 hover:bg-gray-100"
+                >
+                    Álbuns
                 </Link>
                 </div>
             )}

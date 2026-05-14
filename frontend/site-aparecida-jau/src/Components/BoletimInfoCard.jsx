@@ -1,27 +1,28 @@
-const BoletimInfoCard = ({ boletins }) => {
+const BoletimInfoCard = ({ boletim }) => {
+
   return (
-    <div className="grid grid-cols-3 gap-8">
 
-      {boletins.length === 0 && (        
-        <p>Nenhum boletim encontrado</p>
-      )}
+    <a
+      href={`http://localhost:5220${boletim.pdf}`}
+      target="_blank"
+      rel="noreferrer"
+      className="flex flex-col gap-[10px]"
+    >
 
-      {boletins.map((boletim) => (
-        <a key={boletim.id} href={`http://localhost:5220${boletim.pdf}`} target="_blank">
+      <img
+        className="rounded-[15px] w-full hover:scale-[1.02] duration-200"
+        src={`http://localhost:5220${boletim.img}`}
+        alt={boletim.titulo}
+      />
 
-          <img
-            className="rounded-[10px]"
-            src={`http://localhost:5220${boletim.img}`}
-            alt={boletim.titulo}
-          />
+      <p className="font-bold">
+        {boletim.titulo}
+      </p>
 
-          <p className="font-bold">{boletim.titulo}</p>
+    </a>
 
-        </a>
-      ))}
+  )
 
-    </div>
-  );
-};
+}
 
 export default BoletimInfoCard;

@@ -4,6 +4,7 @@ import logo_aparecida from "./../assets/img/logo/logo-aparecida.png";
 import facebook_circle from "./../assets/img/logo/facebook-circle.jpeg";
 import instagram_circle from "./../assets/img/logo/instagram-circle.png";
 import youtube_circle from "./../assets/img/logo/youtube-circle.png";
+import whatsapp_square from "./../assets/img/logo/whatsapp-square.png";
 
 const Navbar = () => {
 
@@ -81,8 +82,8 @@ const Navbar = () => {
           <a href="https://www.instagram.com/aparecidajau/" target='_blank' rel="noreferrer">
             <img className='w-[35px]' src={instagram_circle} alt="" />
           </a>
-          <a className='flex justify-center items-center bg-[#034389] w-[100px] h-[30px] text-[#fff] rounded-[20px]' href="#">
-            login
+          <a href="https://chat.whatsapp.com/EvxJksmUdIYDxzw5fUI99E" target='_blank' rel="noreferrer">
+            <img className='w-[30px] rounded-[50%]' src={whatsapp_square} alt="" />
           </a>
         </div>
       </div>

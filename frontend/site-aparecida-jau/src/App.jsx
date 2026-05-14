@@ -18,28 +18,89 @@ import CriarAlbum from "./Pages/CriarAlbum";
 import Albuns from "./Pages/Albuns";
 import AlbumDetalhe from "./Pages/AlbumDetalhe";
 
+import Footer from "./Components/Footer.jsx";
+import Layout from "./layouts/Layout.jsx";
+
 function App() {
 
   return (
     <BrowserRouter>
 
-      <Navbar/>
-
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/paroquia/historia-da-paroquia" element={<HistoriaDaParoquia />} />
-        <Route path="/paroquia/horarios-de-missa" element={<HorariosDeMissa />} />
-        <Route path="/albuns" element={<Albuns />} />
-        <Route path="/albuns/:slug" element={<AlbumDetalhe />} />
-        <Route path="/boletim-info" element={<BoletimInfo />} />
-        <Route path="/contato" element={<Contato />} />
+
+        {/* ROTAS COM LAYOUT */}
+
+        <Route element={<Layout />}>
+
+          <Route path="/" element={<Home />} />
+
+          <Route
+            path="/paroquia/historia-da-paroquia"
+            element={<HistoriaDaParoquia />}
+          />
+
+          <Route
+            path="/paroquia/horarios-de-missa"
+            element={<HorariosDeMissa />}
+          />
+
+          <Route path="/albuns" element={<Albuns />} />
+
+          <Route path="/albuns/:slug" element={<AlbumDetalhe />} />
+
+          <Route path="/boletim-info" element={<BoletimInfo />} />
+
+          <Route path="/contato" element={<Contato />} />
+
+          <Route path="/noticias" element={<Noticias />} />
+
+          <Route
+            path="/noticias/:slug"
+            element={<NoticiaDetalhe />}
+          />
+
+        </Route>
+
+        {/* ROTAS SEM LAYOUT */}
+
         <Route path="/login" element={<Login />} />
-        <Route path="/admin" element={ <PrivateRoute><Admin /></PrivateRoute> }/>
-        <Route path="/criar-boletim-info" element={ <PrivateRoute><CriarBoletimInfo /></PrivateRoute> } />
-        <Route path="/criar-noticia" element={ <PrivateRoute><CriarNoticia /></PrivateRoute> } />
-        <Route path="/criar-album" element={ <PrivateRoute><CriarAlbum /></PrivateRoute> } />
-        <Route path="/noticias" element={ <Noticias /> } />
-        <Route path="/noticias/:slug" element={<NoticiaDetalhe />} />
+
+        <Route
+          path="/admin"
+          element={
+            <PrivateRoute>
+              <Admin />
+            </PrivateRoute>
+          }
+        />
+
+        <Route
+          path="/criar-boletim-info"
+          element={
+            <PrivateRoute>
+              <CriarBoletimInfo />
+            </PrivateRoute>
+          }
+        />
+
+        <Route
+          path="/criar-noticia"
+          element={
+            <PrivateRoute>
+              <CriarNoticia />
+            </PrivateRoute>
+          }
+        />
+
+        <Route
+          path="/criar-album"
+          element={
+            <PrivateRoute>
+              <CriarAlbum />
+            </PrivateRoute>
+          }
+        />
+
       </Routes>
 
     </BrowserRouter>

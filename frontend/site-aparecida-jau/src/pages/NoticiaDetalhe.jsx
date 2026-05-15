@@ -18,8 +18,8 @@ export default function NoticiaDetalhe() {
   const data = new Date(noticia.data)
 
   return (
-    <div className="flex justify-center">
-      <div className="w-[1000px] pt-[50px]">
+    <div className="flex justify-center px-[20px]">
+      <div className="w-full max-w-[1000px] pt-[50px]">
 
         <Heading>{noticia.titulo}</Heading>
 
@@ -42,14 +42,14 @@ export default function NoticiaDetalhe() {
 
         <div className="flex flex-col items-center mt-[50px]">
           <img
-            className="rounded-[15px] w-[1000px] h-[700px]"
+            className="rounded-[15px] w-[1000px]"
             src={`http://localhost:5220${noticia.imagemCapa}`}
             alt={noticia.titulo}
           />
         </div>
 
         <div
-          className="flex flex-col gap-[25px] w-[700px] mt-[50px] text-[18px] text-justify [&_img]:rounded-[15px]"
+          className="flex flex-col gap-[25px] max-w-[700px] mt-[50px] text-[18px] text-justify [&_img]:rounded-[15px]"
           dangerouslySetInnerHTML={{ __html: noticia.conteudo }}
         />
 

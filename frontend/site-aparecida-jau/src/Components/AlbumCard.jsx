@@ -6,7 +6,8 @@ export default function AlbumCard({ album }) {
       <div className="flex flex-col gap-[10px] hover:scale-[1.02] duration-200">
 
         <img
-          className="w-full h-[250px] object-cover rounded-[20px]"
+          className="w-full h-[250px] object-cover rounded-[20px]
+                     max-xl:h-[350px]"
           src={`http://localhost:5220${album.capa}`}
           alt={album.titulo}
         />

@@ -4,28 +4,42 @@ import SocialMediaIcons from '../Components/SocialMediaIcons';
 const Contato = () => {
   return (
     <>
-        <div className="flex flex-col gap-[30px] items-center mt-[25px]">
+        <div className="flex flex-col gap-[30px] items-center mt-[25px] px-[20px]">
 
             <Heading>Contato</Heading>
 
-            <form className="flex flex-col" action="https://formsubmit.co/aparecidajausite@gmail.com" method="POST">
+            <form className="flex flex-col items-center" action="https://formsubmit.co/aparecidajausite@gmail.com" method="POST">
 
-                <label htmlFor="name">Nome</label>
-                <input className="w-[800px] h-[35px] p-[10px] mb-[5px] border-1 border-[#C0AAAA] rounded-[5px]" type="text" required />
+                <div className="flex flex-col">
+                  <label htmlFor="name">Nome</label>
+                  <input className="w-[800px] h-[35px] p-[10px] mb-[5px] border-1 border-[#C0AAAA] rounded-[5px]
+                                    max-lg:w-[400px]
+                                    max-sm:w-[350px]" type="text" required />
+                </div>
 
-                <label htmlFor="email">Email</label>
-                <input className="w-[800px] h-[35px] p-[10px] mb-[5px] border-1 border-[#C0AAAA] rounded-[5px]" type="email" required />
+                <div className="flex flex-col">
+                  <label htmlFor="email">Email</label>
+                  <input className="w-[800px] h-[35px] p-[10px] mb-[5px] border-1 border-[#C0AAAA] rounded-[5px]
+                                    max-lg:w-[400px]
+                                    max-sm:w-[350px]" type="email" required />
+                </div>
 
-                <label htmlFor="message">Mensagem</label>
-                <textarea className="w-[800px] h-[100px] p-[10px] mb-[5px] border-1 border-[#C0AAAA] rounded-[5px]" name="message" id="message" required></textarea>
+                <div className="flex flex-col">
+                  <label htmlFor="message">Mensagem</label>
+                  <textarea className="w-[800px] h-[100px] p-[10px] mb-[5px] border-1 border-[#C0AAAA] rounded-[5px]
+                                       max-lg:w-[400px]
+                                       max-sm:w-[350px]" name="message" id="message" required></textarea>
+                </div>
 
-                <button className="w-[800px] h-[35px] mb-[5px] bg-[#034389] text-[#fff] rounded-[5px]" type='submit'>Enviar</button>
+                <button className="w-[800px] h-[35px] mb-[5px] bg-[#034389] text-[#fff] rounded-[5px]
+                                   max-lg:w-[400px]
+                                   max-sm:w-[350px]" type='submit'>Enviar</button>
 
             </form>
 
-            <SocialMediaIcons className1={"flex gap-[80px]"} className2={"w-[50px] h-[50px] rounded-[50px]"} />
+            <SocialMediaIcons className1={"flex gap-[80px] max-sm:gap-[40px]"} className2={"w-[50px] h-[50px] rounded-[50px]"} />
 
-            <div className="flex gap-[50px] mb-[50px]">
+            <div className="flex flex-wrap justify-center gap-[50px] mb-[50px]">
 
               <div className="flex gap-[10px]">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
@@ -39,7 +53,7 @@ const Contato = () => {
 
             </div>
 
-            <div className='flex flex-col gap-[30px]'>
+            <div className='flex flex-col items-center gap-[30px] max-w-[1000px] w-full'>
 
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.690585237682!2d-48.57557082470781!3d-22.289707679694217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b8a81b92d39a01%3A0x9c733cf8b3992a82!2sPar%C3%B3quia%20Nossa%20Senhora%20Aparecida!5e0!3m2!1spt-BR!2sbr!4v1773326352828!5m2!1spt-BR!2sbr"

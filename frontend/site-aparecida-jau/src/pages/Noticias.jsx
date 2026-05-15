@@ -21,11 +21,11 @@ const Noticias = () => {
   )
 
   return (
-    <div className="flex flex-col items-center gap-[30px] mt-[25px]">
+    <div className="flex flex-col items-center px-[20px] gap-[30px] mt-[25px]">
       <Heading>Notícias</Heading>
 
-      <p>
-        Confira as notícias da casa da Mãe, incluindo eventos. <br />
+      <p className="text-[18px] text-center max-w-[500px]">
+        Confira as notícias da casa da Mãe, incluindo eventos.
         Para uma busca mais exata, selecione a data da notícia.
       </p>
 
@@ -43,7 +43,9 @@ const Noticias = () => {
         }}
       />
 
-      <div className="grid grid-cols-3 gap-8">
+      <div className="grid grid-cols-3 gap-8
+                      max-xl:grid-cols-2
+                      max-md:grid-cols-1">
         {noticiasFiltradas.map(noticia => (
           <Link key={noticia.id} to={`/noticias/${noticia.slug}`}>
             <NoticiaCard noticia={noticia} />

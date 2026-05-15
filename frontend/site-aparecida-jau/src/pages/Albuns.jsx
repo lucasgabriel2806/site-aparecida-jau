@@ -18,13 +18,14 @@ export default function Albuns() {
   )
 
   return (
-    <div className="flex justify-center mt-[40px] mb-[100px]">
 
-      <div className="w-[1200px] flex flex-col gap-[40px]">
+    <div className="flex justify-center px-[20px] mt-[40px] mb-[100px]">
+
+      <div className="max-w-[1000px] flex flex-col items-center gap-[40px]">
 
         <Heading>Álbuns</Heading>
 
-        <p>
+        <p className="text-[18px] text-center max-w-[400px]">
           Confira registros fotográficos das missas,
           eventos e momentos especiais da paróquia.
         </p>
@@ -49,7 +50,9 @@ export default function Albuns() {
           <p>Nenhum álbum encontrado.</p>
         )}
 
-        <div className="grid grid-cols-3 gap-[30px]">
+        <div className="grid grid-cols-3 gap-[30px]
+                        max-xl:grid-cols-2
+                        max-md:grid-cols-1">
 
           {albunsFiltrados.map(album => (
             <AlbumCard

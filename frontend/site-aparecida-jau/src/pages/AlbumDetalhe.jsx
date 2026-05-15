@@ -19,7 +19,7 @@ export default function AlbumDetalhe() {
   }
 
   return (
-    <div className="flex justify-center mt-[40px] mb-[100px]">
+    <div className="flex justify-center px-[20px] mt-[40px] mb-[100px]">
 
       <div className="w-[1200px] flex flex-col gap-[30px]">
 
@@ -33,7 +33,9 @@ export default function AlbumDetalhe() {
           {new Date(album.data).toLocaleDateString("pt-BR")}
         </p>
 
-        <div className="columns-3 gap-[20px] space-y-[20px]">
+        <div className="columns-3 gap-[20px] space-y-[20px]
+                        max-xl:columns-2
+                        max-md:columns-1">
 
           {album.fotos.map((foto, index) => (
             <img

@@ -47,11 +47,11 @@ const BoletimInfo = () => {
     .sort((a, b) => b.data.localeCompare(a.data)); // MAIS RECENTE PRIMEIRO
 
   return (
-    <div className="flex flex-col items-center gap-[30px] mt-[25px]">
+    <div className="flex flex-col items-center px-[20px] gap-[30px] mt-[25px]">
 
       <Heading>Boletim Informativo</Heading>
 
-      <p>
+      <p className="text-[18px] text-center max-w-[450px]">
         Confira as notícias e eventos da paróquia em nossos Boletins Informativos.
       </p>
 

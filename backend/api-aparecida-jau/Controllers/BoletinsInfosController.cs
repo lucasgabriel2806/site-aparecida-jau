@@ -62,12 +62,14 @@ namespace api_aparecida_jau.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<BoletimInfo>>> GetBoletinsInfos()
-        {
-            var boletinsInfos = await _appDbContext.BoletinsInfos.ToListAsync();
+    public async Task<ActionResult<IEnumerable<BoletimInfo>>> GetBoletinsInfos()
+    {
+        var boletinsInfos = await _appDbContext.BoletinsInfos
+            .OrderByDescending(b => b.Data)
+            .ToListAsync();
 
-            return Ok(boletinsInfos);            
-        }
+        return Ok(boletinsInfos);
+    }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<IEnumerable<BoletimInfo>>> GetBoletimInfo(int id)

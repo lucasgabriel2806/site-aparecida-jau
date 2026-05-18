@@ -1,0 +1,107 @@
+# =========================
+# REACT / NODE
+# =========================
+
+# Dependências
+node_modules/
+
+# Build
+dist/
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Ambiente
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Cache
+.cache/
+.parcel-cache/
+.vite/
+coverage/
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# =========================
+# .NET / C#
+# =========================
+
+# Build
+bin/
+obj/
+
+# User files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio
+.vs/
+
+# Rider
+.idea/
+
+# Logs
+*.log
+
+# Cache
+*.cache
+*.lscache
+
+# Publish
+publish/
+
+# IIS Express
+.vs/
+iisexpress/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# NuGet
+*.nupkg
+packages/
+
+# Testes
+TestResults/
+
+# Arquivos temporários
+*.tmp
+*.temp
+
+# =========================
+# APP SETTINGS SENSÍVEIS
+# =========================
+
+# Se tiver secrets locais, ignore:
+appsettings.Local.json
+appsettings.Production.json
+
+# =========================
+# WWWROOT GERADO
+# =========================
+
+# Se uploads forem gerados em runtime:
+wwwroot/uploads/
+
+# =========================
+# GIT
+# =========================
+
+*.orig
